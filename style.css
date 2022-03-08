@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+}
+
+#calculator {
+  font-size: 40px;
+  min-height: 600px;
+  width: 400px;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    "display display"
+    "numbers operators";
+}
+
+#display {
+  background: lightseagreen;
+  grid-area: display;
+}
+
+#numbers {
+  background: lightskyblue;
+  grid-area: numbers;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  align-items: center;
+  justify-items: center;
+}
+
+#operators {
+  background: teal;
+  grid-area: operators;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+p {
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
